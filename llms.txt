@@ -1,0 +1,28 @@
+# Rajab Muzaffarov
+
+> Full-stack developer in Tashkent, Uzbekistan with 2+ years of experience building production web applications with React, Next.js and TypeScript.
+
+Website: https://muzaffarov.uz/
+Email: muzaffarovrajab25@gmail.com
+GitHub: https://github.com/muzaffarovs
+LinkedIn: https://www.linkedin.com/in/muzaffarov/
+Résumé (PDF): https://muzaffarov.uz/Rajab-Muzaffarov-CV.pdf
+
+## Selected work
+
+- AI Avtojavob / Aylo (Cresta): AI-powered sales automation that connects Instagram, Telegram, Facebook and WhatsApp, turns Instagram comments matching keywords into AI direct-message replies, with custom prompts, admin consoles and self-serve onboarding.
+- Sifat Nazorat (Toshkent Sinov Xizmati): quality-control platform for laboratory testing and product certification with QR-code verification pages, dynamic product and producer routes, Next.js, TypeScript, MongoDB and Supabase Auth.
+- Cresta: corporate website, Telegram bot and CRM for a newly founded development company.
+- T-SX (Toshkent Sinov Xizmati): corporate website with a news CMS, photo gallery and admin interface.
+- Fimtext: landing page for a textile testing and quality-control laboratory.
+
+## Skills
+
+- Languages: JavaScript, TypeScript, HTML5, CSS3
+- Frontend: React, Next.js, Tailwind CSS, shadcn/ui
+- State and data: Redux Toolkit, Zustand, TanStack Query, React Hook Form, Zod
+- Backend: Node.js, Express.js, REST APIs
+- Databases and services: MongoDB, PostgreSQL, Supabase
+- Authentication: Supabase Auth, JWT, HTTP-only cookies
+- AI and automation: AI API integrations, n8n, Telegram Bot API, social media API integrations
+- DevOps and tools: Git, GitHub, Docker, Vercel, Cloudflare, Linux/WSL
