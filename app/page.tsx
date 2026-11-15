@@ -1,9 +1,9 @@
+import Link from "next/link";
 import Contact from "@/components/Contact";
 import JsonLd from "@/components/JsonLd";
-import Lead from "@/components/Lead";
 import WorkIndex from "@/components/WorkIndex";
 import { projects } from "@/lib/projects";
-import { CV, NAME, PERSON_ID, SITE, WEBSITE_ID, person, website } from "@/lib/site";
+import { CV, EMAIL, GITHUB, NAME, PERSON_ID, SITE, WEBSITE_ID, person, website } from "@/lib/site";
 
 const graph = [
   website,
@@ -17,7 +17,7 @@ const graph = [
     mainEntity: { "@id": PERSON_ID },
     primaryImageOfPage: { "@id": `${SITE}/#avatar` },
     dateCreated: "2026-09-15",
-    dateModified: "2026-10-26",
+    dateModified: "2026-11-15",
   },
   person,
   {
@@ -33,26 +33,30 @@ export default function Home() {
     <main>
       <JsonLd graph={graph} />
 
-      <section className="hero">
-        <div className="wrap">
-          <h1 className="display" aria-label="Rajab Muzaffarov, full-stack developer in Tashkent">
-            <span aria-hidden="true">Rajab</span>
-            <span aria-hidden="true">Muzaffarov</span>
-          </h1>
-        </div>
-        <Lead label="Index" links={[
-          { href: "/work/", label: "Selected work" },
-          { href: "/about/", label: "About" },
-          { href: CV, label: "Résumé, PDF", external: true },
-        ]}>
+      <section className="wrap intro">
+        <h1 className="display" aria-label="Rajab Muzaffarov">
+          <span aria-hidden="true">Rajab</span>
+          <span aria-hidden="true">Muzaffarov</span>
+        </h1>
+        <div className="intro-row">
+          <p className="label status">Full-stack developer, Tashkent</p>
           <p>
-            Full-stack developer in Tashkent. I build the software a business runs on: an export ERP
-            that reads its own paperwork, websites people remember, and the admin panels behind them.
+            I build the software a business runs on.{" "}
+            <span className="muted">An export ERP that reads its own paperwork, company websites, and the admin panels behind them.</span>
           </p>
-        </Lead>
+          <p className="links">
+            <a href={`mailto:${EMAIL}`}>Email</a>
+            <a href={CV} target="_blank" rel="noopener">Résumé ↗</a>
+            <a href={GITHUB} target="_blank" rel="noopener">GitHub ↗</a>
+          </p>
+        </div>
       </section>
 
-      <section className="block" aria-label="Work">
+      <section className="wrap sec" aria-labelledby="work-h">
+        <div className="sec-head">
+          <h2 className="label" id="work-h">Selected work</h2>
+          <Link className="label" href="/work/">{projects.length} projects</Link>
+        </div>
         <WorkIndex />
       </section>
 

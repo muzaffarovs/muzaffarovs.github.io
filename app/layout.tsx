@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Mono, Inter_Tight } from "next/font/google";
+import { Archivo, IBM_Plex_Mono, Inter_Tight } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Effects from "@/components/Effects";
@@ -7,6 +7,8 @@ import { GITHUB, KEYWORDS, LINKEDIN, NAME, OG_IMAGE, SITE, TELEGRAM } from "@/li
 import "./globals.css";
 
 const sans = Inter_Tight({ subsets: ["latin", "cyrillic"], variable: "--font-sans", display: "swap" });
+// Display face for the name and titles: Archivo with its width axis, set expanded in CSS.
+const display = Archivo({ subsets: ["latin", "latin-ext"], axes: ["wdth"], variable: "--font-display", display: "swap" });
 const mono = IBM_Plex_Mono({ subsets: ["latin", "cyrillic"], weight: ["400", "500"], variable: "--font-mono", display: "swap" });
 
 const description =
@@ -61,21 +63,15 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F1EFEA" },
-    { media: "(prefers-color-scheme: dark)", color: "#111110" },
-  ],
-  colorScheme: "light dark",
+  themeColor: "#0B0B0C",
+  colorScheme: "dark",
 };
 
-// Applies the saved theme before first paint so there is no flash.
-const themeScript = `document.documentElement.classList.add('js');try{var t=localStorage.getItem('rm-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${sans.variable} ${display.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <link rel="me" href={GITHUB} />
         <link rel="me" href={LINKEDIN} />
         <link rel="me" href={TELEGRAM} />

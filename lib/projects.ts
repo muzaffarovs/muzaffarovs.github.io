@@ -97,6 +97,7 @@ export const projects: Project[] = [
     stack: ["Corporate site", "Telegram bot", "CRM"],
     role: "Full-stack developer",
     live: { label: "cresta.uz", url: "https://cresta.uz/" },
+    image: { src: "/work/cresta.webp", alt: "The cresta.uz home page: a dark page with a large Uzbek headline, the last word set in lime italic." },
   },
   {
     slug: "t-sx",

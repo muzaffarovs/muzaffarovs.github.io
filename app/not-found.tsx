@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import Lead from "@/components/Lead";
+import Link from "next/link";
 
 export const metadata: Metadata = { title: "Page not found", alternates: { canonical: null }, robots: { index: false, follow: true } };
 
 export default function NotFound() {
   return (
-    <main className="page-head lost">
-      <div className="wrap"><h1 className="display display-page">404</h1></div>
-      <Lead label="Not found" links={[{ href: "/", label: "Index" }, { href: "/work/", label: "Work" }]}>
-        <p>Nothing lives at this address.</p>
-      </Lead>
+    <main className="wrap page-head lost">
+      <h1 className="title display">Not found</h1>
+      <p className="lede">Nothing lives at this address. Try the <Link className="u" href="/">home page</Link> or the <Link className="u" href="/work/">work</Link>.</p>
     </main>
   );
 }

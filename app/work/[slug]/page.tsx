@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Contact from "@/components/Contact";
 import JsonLd from "@/components/JsonLd";
-import Lead from "@/components/Lead";
+import { Media } from "@/components/WorkIndex";
 import { getProject, projects } from "@/lib/projects";
 import { NAME, OG_IMAGE, PERSON_ID, SITE, WEBSITE_ID, breadcrumbs } from "@/lib/site";
 
@@ -64,36 +64,45 @@ export default async function CaseStudy({ params }: Props) {
         breadcrumbs([{ name: "Work", path: "/work/" }, { name: fullName, path: `/work/${p.slug}/` }]),
       ]} />
 
-      <header className="page-head">
-        <div className="wrap">
-          <h1 className="display display-page">{p.name}</h1>
-        </div>
-        <Lead label={p.category} links={[
-          ...(p.live ? [{ href: p.live.url, label: `${p.live.label} ↗`, external: true }] : []),
-          { href: `/work/${next.slug}/`, label: `Next: ${next.name}` },
-          { href: "/work/", label: "All work" },
-        ]}>
-          <p>{p.lede}</p>
-        </Lead>
+      <header className="wrap page-head">
+        <Link className="back" href="/work/">← All work</Link>
+        <h1 className="title display">{p.name}</h1>
+        <p className="lede">{p.lede}</p>
+        <dl className="facts">
+          <div><dt className="label">Type</dt><dd>{p.category}</dd></div>
+          <div><dt className="label">Client</dt><dd>{p.client}</dd></div>
+          <div><dt className="label">Role</dt><dd>{p.role}{p.team && <span className="muted">, with {p.team}</span>}</dd></div>
+          <div>
+            <dt className="label">Live</dt>
+            <dd>{p.live ? <a className="u" href={p.live.url} target="_blank" rel="noopener">{p.live.label} ↗</a> : <span className="muted">Private system</span>}</dd>
+          </div>
+        </dl>
       </header>
 
-      {p.image && (
-        <figure className="shot wrap reveal">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={p.image.src} alt={p.image.alt} width={1440} height={900} loading="eager" />
-        </figure>
-      )}
+      {p.image && <figure className="wrap shot"><Media p={p} eager /></figure>}
 
-      {p.stats && (
-        <section className="block" aria-label="In figures">
-          <div className="wrap grid">
-            <p className="label col-label">Figures</p>
-            <dl className="figures reveal">
-              {p.stats.map(s => <div key={s.label}><dd>{s.value}</dd><dt>{s.label}</dt></div>)}
+      <div className="wrap">
+        {p.stats && (
+          <section className="split" aria-labelledby="fig-h">
+            <h2 className="label" id="fig-h">In figures</h2>
+            <dl className="figures">
+              {p.stats.map(s => <div key={s.label}><dd>{s.value}</dd><dt className="label">{s.label}{s.note && <small>{s.note}</small>}</dt></div>)}
             </dl>
-          </div>
+          </section>
+        )}
+        <section className="split" aria-labelledby="built-h">
+          <h2 className="label" id="built-h">What I built</h2>
+          <ol className="built">{p.built.map(b => <li key={b}>{b}</li>)}</ol>
         </section>
-      )}
+        <section className="split" aria-labelledby="stack-h">
+          <h2 className="label" id="stack-h">Stack</h2>
+          <ul className="tags">{p.stack.map(t => <li key={t}>{t}</li>)}</ul>
+        </section>
+        <Link className="next" href={`/work/${next.slug}/`}>
+          <span className="label">Next project</span>
+          <span className="next-name display">{next.name} →</span>
+        </Link>
+      </div>
 
       <Contact />
     </main>
