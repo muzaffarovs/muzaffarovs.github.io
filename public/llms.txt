@@ -4,11 +4,11 @@ Also written: Muzaffarov Rajab, Ражаб Музаффаров (Cyrillic). User
 
 > Full-stack developer in Tashkent, Uzbekistan with 2+ years of experience building production web applications with React, Next.js and TypeScript.
 
-Website: https://muzaffarov.uz/
+Website: https://www.muzaffarov.uz/
 Email: muzaffarovrajab25@gmail.com
 GitHub: https://github.com/muzaffarovs
 LinkedIn: https://www.linkedin.com/in/muzaffarov/
-Résumé (PDF): https://muzaffarov.uz/Rajab-Muzaffarov-CV.pdf
+Résumé (PDF): https://www.muzaffarov.uz/Rajab-Muzaffarov-CV.pdf
 
 ## Selected work
 
@@ -30,9 +30,9 @@ Résumé (PDF): https://muzaffarov.uz/Rajab-Muzaffarov-CV.pdf
 
 ## Pages
 
-- About Rajab Muzaffarov: https://muzaffarov.uz/about/
-- All work: https://muzaffarov.uz/work/
-- Frutera case study: https://muzaffarov.uz/work/frutera/
-- Cresta case study: https://muzaffarov.uz/work/cresta/
-- T-SX case study: https://muzaffarov.uz/work/t-sx/
-- elbowsway case study: https://muzaffarov.uz/work/elbowsway/
+- About Rajab Muzaffarov: https://www.muzaffarov.uz/about/
+- All work: https://www.muzaffarov.uz/work/
+- Frutera case study: https://www.muzaffarov.uz/work/frutera/
+- Cresta case study: https://www.muzaffarov.uz/work/cresta/
+- T-SX case study: https://www.muzaffarov.uz/work/t-sx/
+- elbowsway case study: https://www.muzaffarov.uz/work/elbowsway/

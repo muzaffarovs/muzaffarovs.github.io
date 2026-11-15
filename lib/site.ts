@@ -1,4 +1,4 @@
-export const SITE = "https://muzaffarov.uz";
+export const SITE = "https://www.muzaffarov.uz";
 export const NAME = "Rajab Muzaffarov";
 export const EMAIL = "muzaffarovrajab25@gmail.com";
 export const PHONE = "+998500049173";
@@ -46,7 +46,7 @@ export const person = {
   alternateName: NAME_VARIANTS,
   jobTitle: "Full-Stack Developer",
   description:
-    "Full-stack developer in Tashkent, Uzbekistan with 2+ years of experience building production web applications with React, Next.js and TypeScript, including AI-powered customer communication, laboratory quality-control platforms, ERPs, CRMs and corporate websites.",
+    "Full-stack developer in Tashkent, Uzbekistan with 2+ years of experience building production web applications with React, Next.js and TypeScript, including export ERPs with AI document reading, CRMs, admin platforms and websites with their own CMS.",
   url: `${SITE}/`,
   image: {
     "@type": "ImageObject",
