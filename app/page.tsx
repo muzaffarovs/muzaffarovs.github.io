@@ -46,8 +46,8 @@ export default function Home() {
           { href: CV, label: "Résumé, PDF", external: true },
         ]}>
           <p>
-            Full-stack developer in Tashkent. I build the software a business runs on: AI that answers customers in their DMs,
-            QR-verified lab certificates, an export ERP, and the admin panels behind them.
+            Full-stack developer in Tashkent. I build the software a business runs on: an export ERP
+            that reads its own paperwork, websites people remember, and the admin panels behind them.
           </p>
         </Lead>
       </section>

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: NAME,
     url: "/",
     title: "Rajab Muzaffarov — Full-Stack Developer in Tashkent",
-    description: "I build production web apps with React, Next.js and TypeScript: AI sales automation, ERPs, CRMs, QR-verified lab certificates and admin platforms.",
+    description: "I build production web apps with React, Next.js and TypeScript: ERPs, CRMs, websites and admin platforms.",
     locale: "en_US",
     firstName: "Rajab",
     lastName: "Muzaffarov",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Rajab Muzaffarov — Full-Stack Developer in Tashkent",
-    description: "I build production web apps with React, Next.js and TypeScript: AI sales automation, ERPs, CRMs, QR-verified lab certificates and admin platforms.",
+    description: "I build production web apps with React, Next.js and TypeScript: ERPs, CRMs, websites and admin platforms.",
     images: [{ url: OG_IMAGE, alt: "Rajab Muzaffarov, full-stack developer in Tashkent, Uzbekistan." }],
   },
   icons: {
